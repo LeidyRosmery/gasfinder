@@ -27,6 +27,7 @@ const Search = () => {
 
     buscar.on('keyup', (e) => {
         reRender(listSearch);
+        
         filterByDistrict(state.stations, buscar.val());
         busqueda.all.forEach(elemento=>{
         listSearch.append(TodoItem(elemento));
