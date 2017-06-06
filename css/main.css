@@ -17,3 +17,13 @@ header {
 header .fa-chevron-left {
   margin-right: 16px;
 }
+
+.container{
+margin : 20px 50px;
+}
+
+input[type="text"] {
+    width: 90%;
+    margin: 0 13px;
+    height: 27px;
+}
