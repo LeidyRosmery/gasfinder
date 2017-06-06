@@ -1,13 +1,17 @@
 'use strict';
+const busqueda={
+   all:[]
+};
 
 const filterByDistrict = (stations,query) => {
 stations.forEach(elemento=>{
-  if(elemento.name==query){
-    console.log("coencide");
-  }else {
-    console.log("falso");
+  if(elemento.district.indexOf(query)!=-1){
+      busqueda.all.push(elemento.district);
+      return busqueda.all;
   }
 });
+
+
 /*
 state.movies.forEach((movie) => {
   movieContainer.append(movieItem(movie,update));
