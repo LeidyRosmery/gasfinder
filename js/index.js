@@ -26,7 +26,6 @@ $( _ => {
     //cb open send
     const root = $('.root');
     render(root);
-    console.log(json);
-    console.log(state.stations[0].name);
+
   });
 });
