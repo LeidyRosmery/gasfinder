@@ -1,25 +1,26 @@
 * {
-  margin:0px;
-  padding:0px;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
-  color: #fff;
-  font-size: 18px;
-  height: 56px;
-  line-height: 56px;
-  padding-left: 16px;
-  background-color: #F44336;
+    color: #fff;
+    font-size: 18px;
+    height: 56px;
+    line-height: 56px;
+    padding-left: 16px;
+    background-color: #F44336;
 }
 
 header .fa-chevron-left {
-  margin-right: 16px;
+    margin-right: 16px;
+    cursor: pointer;
 }
 
-.container{
-margin : 20px 50px;
+.container {
+    margin: 20px 50px;
 }
 
 input[type="text"] {
@@ -27,7 +28,13 @@ input[type="text"] {
     margin: 0 13px;
     height: 27px;
 }
+
 .todo {
     display: flex;
     justify-content: space-between;
+}
+
+#map{
+  height: 40vh;
+  width: 100vw;
 }

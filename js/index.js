@@ -3,8 +3,6 @@
 const render = (root) => {
   root.empty();
 
-
-
   const wrapper = $('<div class="wrapper"></div>');
   wrapper.append(Header(_ => render(root)));
  if (state.selectedStation == null) {
@@ -12,11 +10,10 @@ const render = (root) => {
       render(root);
     }));
   } else {
-    wrapper.append(StationDetail( _ => {
+    wrapper.append(Gmap( _ => {
       render(root);
     }));
-
-    wrapper.append(Gmap( _ => {
+    wrapper.append(StationDetail( _ => {
       render(root);
     }));
     //  var gmap=Gmap();
