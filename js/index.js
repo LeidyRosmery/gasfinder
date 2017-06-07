@@ -3,10 +3,18 @@
 const render = (root) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
-  //HEader (){ render(root)}
-  //header(function(){render(root)});
+
   wrapper.append(Header(_ => render(root)));
-  wrapper.append(Search());
+
+ if (state.selectedStation == null) {
+    wrapper.append(Search( _ => {
+      render(root);
+    }));
+  } else {
+    wrapper.append(StationDetail( _ => {
+      render(root);
+    }));
+  }
   root.append(wrapper);
 }
 
@@ -15,17 +23,13 @@ const state = {
   selectedStation: null
 };
 // inicializndo ready
-/* function(err,json){
 
-}
-*/
 $( _ => {
   getJSON('stations.json', (err, json) => {
     if (err) { return alert(err.message);}
     state.stations = json;
-    //cb open send
+    //cb open send*/
     const root = $('.root');
     render(root);
-    
   });
 });
