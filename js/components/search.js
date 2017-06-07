@@ -1,16 +1,16 @@
 'use strict';
-const TodoItem=(data,update)=>{
+const TodoItem=(data)=>{
   const todo=$('<div class="todo"></div>');
   const span=$('<span>'+data+'</span>');
   todo.append(span);
   return todo;
 }
 
-const reRender=(lista)=>{
-  console.log(busqueda);
-  lista.empty();
-  busqueda.all.length=0;
-}
+// const reRender=(lista)=>{
+//   console.log(busqueda);
+//   lista.empty();
+//   busqueda.all.length=0;
+// }
 
 
 const Search = () => {
@@ -26,17 +26,12 @@ const Search = () => {
     content.append(listSearch);
 
     buscar.on('keyup', (e) => {
-        reRender(listSearch);
-        
-        filterByDistrict(state.stations, buscar.val());
-        busqueda.all.forEach(elemento=>{
-        listSearch.append(TodoItem(elemento));
-        });
-
-        if (buscar.val() =="") {
-          reRender(listSearch);
-        }
-
+    listSearch.empty();
+    const resultado=filterByDistrict(state.stations, buscar.val());
+    resultado.forEach(function(e){
+      listSearch.append(TodoItem(e.district));
+    });
+    console.log(resultado);
     });
     return content;
 }

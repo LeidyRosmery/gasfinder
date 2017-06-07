@@ -26,6 +26,6 @@ $( _ => {
     //cb open send
     const root = $('.root');
     render(root);
-
+    
   });
 });
