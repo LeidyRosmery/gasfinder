@@ -27,3 +27,7 @@ input[type="text"] {
     margin: 0 13px;
     height: 27px;
 }
+.todo {
+    display: flex;
+    justify-content: space-between;
+}

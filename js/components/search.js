@@ -1,9 +1,13 @@
 'use strict';
 const TodoItem=(data)=>{
   const todo=$('<div class="todo"></div>');
-  const span=$('<span>'+data+'</span>');
+  const spanNombre=$('<p>'+data.name+'</p>');
+  const span=$('<p>'+data.district+'</p>');
+  const spanDireccion=$('<p>'+data.address+'</p>');
   const iconMap = $('<i class="fa fa-map-marker" aria-hidden="true"></i>');
   todo.append(span);
+  todo.append(spanDireccion);
+  todo.append(spanNombre);
     todo.append(iconMap);
   return todo;
 }
@@ -31,7 +35,7 @@ const Search = () => {
     listSearch.empty();
     const resultado=filterByDistrict(state.stations, buscar.val());
     resultado.forEach(function(e){
-      listSearch.append(TodoItem(e.district));
+      listSearch.append(TodoItem(e));
     });
     console.log(resultado);
     });
