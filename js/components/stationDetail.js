@@ -1,14 +1,11 @@
 'use strict';
-
-
-
 const StationDetail = (update) => {
-  const map= $('<div id="map"></div>');
+
   const container = $('<div class="stationDetail"></div>');
   const nameStation = $('<h1>'+state.selectedStation.name+'</h1>');
   const divisor=$('<hr>');
   const directionStation = $('<h1>'+state.selectedStation.address+'</h1>');
-  container.append(map);
+  //container.append(map);
   container.append(nameStation);
   container.append(divisor);
   container.append(directionStation);

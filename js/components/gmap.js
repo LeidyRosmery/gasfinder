@@ -1,7 +1,11 @@
-var map;
 
-var init =function() {
-  map = new GMaps({
+
+
+const Gmap = (update) => {
+  const wrapper = $('<div id="map"></div>');
+
+$( _ => {
+  const map = new GMaps({
     div: '#map',
     zoom:16,
     lat: -12.043333,
@@ -13,11 +17,7 @@ var init =function() {
     lng: -77.03,
     title: 'Lima'
   });
+});
 
-}
-
-var Gmap = () => {
-  var wrapper = $('<div id="map"></div>');
-  wrapper.init = init.bind(null,wrapper.get(0));
   return wrapper;
 }
