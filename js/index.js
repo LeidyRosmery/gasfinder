@@ -4,7 +4,11 @@ const render = (root) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
 
+
   wrapper.append(Header(_ => render(root)));
+  var gmap = Gmap();
+  gmap.init();
+
 
  if (state.selectedStation == null) {
     wrapper.append(Search( _ => {
