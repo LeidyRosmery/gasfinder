@@ -2,7 +2,9 @@
 const TodoItem=(data)=>{
   const todo=$('<div class="todo"></div>');
   const span=$('<span>'+data+'</span>');
+  const iconMap = $('<i class="fa fa-map-marker" aria-hidden="true"></i>');
   todo.append(span);
+    todo.append(iconMap);
   return todo;
 }
 
