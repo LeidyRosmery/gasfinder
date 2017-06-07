@@ -1,6 +1,6 @@
 'use strict';
 const Header = (update) => {
-  const header = $("<header></header>");
+  const header = $("<header class='nav-wrapper'></header>");
   const icon = $('<i class="fa fa-chevron-left" aria-hidden="true"></i>');
 
   if(state.selectedStation !== null){
@@ -13,7 +13,7 @@ const Header = (update) => {
     state.selectedStation = null;
     update();
   })
-  
+
   return header;
 
 }

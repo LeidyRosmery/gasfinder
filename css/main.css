@@ -20,13 +20,14 @@ header .fa-chevron-left {
 }
 
 .container {
-    margin: 20px 50px;
+    /*  margin: 20px 50px;*/
 }
 
 input[type="text"] {
-    width: 90%;
+    width: 100%;
     margin: 0 13px;
     height: 27px;
+    background: #fff;
 }
 
 .todo {
@@ -34,7 +35,42 @@ input[type="text"] {
     justify-content: space-between;
 }
 
-#map{
-  height: 40vh;
-  width: 100vw;
+.buscador {
+    padding: 10px 10px;
+    background: #F44336;
+}
+
+#map {
+    height: 40vh;
+    width: 100vw;
+}
+
+.div-map {
+    display: flex;
+    justify-content: center;
+}
+
+.mapIcon {
+    color: gray;
+    font-size: 30px;
+}
+
+.col.s8.offset-s1.producto{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.producto-detail {
+    width: 45px;
+    height: 25px;
+    /* background: #2C6; */
+}
+.icon-buscar{
+  height: 27px;
+  background: #fff;
+}
+.input-buscar{
+  margin: 0;
+  padding: 0;
 }
