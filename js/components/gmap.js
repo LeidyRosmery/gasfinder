@@ -29,6 +29,11 @@ const Gmap = (update) => {
                     lng: state.selectedStation.long,
                     title: 'Estación:' + state.selectedStation.name,
                 });
+                map.addMarker({
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                    title: 'Estación:' + state.selectedStation.name,
+                });
 
             },
             error: function(error) {
