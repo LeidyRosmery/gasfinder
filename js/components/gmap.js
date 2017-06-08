@@ -14,37 +14,30 @@ const Gmap = (update) => {
             lng: state.selectedStation.long
         });
 
-        map.addMarker({
-            lat: state.selectedStation.lat,
-            lng: state.selectedStation.long,
-            title: "Grifo :" + state.selectedStation.name
-        });
-
-      /*  GMaps.geolocate({
+        GMaps.geolocate({
             success: function(position) {
-              map.setCenter(position.coords.latitude, position.coords.longitude);
+                map.drawRoute({
+                    origin: [position.coords.latitude, position.coords.longitude],
+                    destination: [state.selectedStation.lat, state.selectedStation.long],
+                    travelMode: 'driving',
+                    strokeColor: '#131540',
+                    strokeOpacity: 0.6,
+                    strokeWeight: 4
+                });
+                map.addMarker({
+                    lat: state.selectedStation.lat,
+                    lng: state.selectedStation.long,
+                    title: 'Estación:' + state.selectedStation.name,
+                });
+
             },
             error: function(error) {
-              alert('Geolocation failed: '+error.message);
+                alert('Geolocalización fallada: ' + error.message);
             },
             not_supported: function() {
-              alert("Your browser does not support geolocation");
-            },
-            always: function() {
-              alert("Done!");
+                alert("Tu navegador no soporta la API geolocation");
             }
-      });*/
-/*
-      mapa . drawRoute ({
-        origen : [- 12,044012922866312 , - 77,02470665341184 ],
-        destino : [- 12,090814532191756 , - 77,02271108990476 ],
-        travelMode : 'conducción' ,
-        strokeColor : '# 131540' ,
-        strokeOpacity : 0,6 ,
-        strokeWeight : 6
-      });
-*/
-
+        });
     });
     return wrapper;
 }

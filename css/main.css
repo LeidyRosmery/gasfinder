@@ -55,7 +55,7 @@ input[type="text"] {
     font-size: 30px;
 }
 
-.col.s8.offset-s1.producto{
+.col.s8.offset-s1.producto {
     display: flex;
     justify-content: space-around;
     padding-top: 30px;
@@ -66,11 +66,14 @@ input[type="text"] {
     height: 25px;
     /* background: #2C6; */
 }
-.icon-buscar{
-  height: 27px;
-  background: #fff;
+
+.icon-buscar {
+    height: 27px;
+    background: #fff;
 }
-.input-buscar{
-  margin: 0;
-  padding: 0;
+
+.col.s11.input-buscar {
+    padding-left: 0px;
+    position: relative;
+    left: -13px;
 }
